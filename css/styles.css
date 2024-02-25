@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(255, 166, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+
+h2 {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  background: linear-gradient(orange, rgba(255, 166, 0, 0.6));
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: right;
+}
+
+.nav-link {
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-nav {
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+}
+
+.imagen-principal {
+  background-image: url("/imgs/fondo.jpg");
+  background-size: cover;
+}
+
+.texto {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  padding: 10%;
+}
+.texto h2 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.texto h5 {
+  font-size: 1rem;
+}
+
+.campo-redes {
+  margin-top: 5%;
+}
+.campo-redes a {
+  text-decoration: none;
+  color: white;
+}
+
+.campo-redes {
+  display: flex;
+  justify-content: center;
+}
+
+.campo-redes a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.campo-redes a:hover {
+  transform: scale(1.2);
+}
+
+.sobre-mi {
+  background: linear-gradient(rgb(255, 140, 0), #fdbf43);
+}
+
+.imagen-fija {
+  width: 20vw;
+  height: 35vh;
+}
+
+.sobre-mi h3 {
+  font-family: monospace;
+}
+.sobre-mi img {
+  border: 6px double black;
+  margin-top: 2%;
+}
+
+b {
+  animation: cambiarColor 2s infinite alternate;
+}
+
+.skills {
+  background: linear-gradient(rgb(255, 132, 0), #fdbf43);
+  background-color: white;
+  padding: 50px 0;
+}
+.skills .skills-text {
+  font-family: "Press Start 2P", cursive;
+  animation: aparecer 1s ease-out;
+}
+.skills .carousel-item img {
+  animation: aparecer 1s ease-out;
+}
+
+.skills p {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.carousel-caption {
+  position: relative;
+  margin-right: 30%;
+  font-family: "Press Start 2P", cursive;
+}
+
+.contacto {
+  background: linear-gradient(rgb(255, 140, 0), #fdbf43);
+}
+
+.contacto .info i {
+  font-size: 20px;
+  color: black;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #effbf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contacto .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222222;
+}
+
+.contacto .info p {
+  padding: 0 0 0 60px;
+  font-size: 14px;
+  color: white;
+}
+
+.contacto .info .email,
+.contacto .info .phone {
+  margin-top: 10%;
+}
+
+.contacto .info .email:hover i,
+.contacto .info .phone:hover i {
+  background: black;
+  color: #fff;
+}
+
+.contacto .formu {
+  width: 100%;
+  background: #fff;
+}
+
+.contacto .formu .form-group {
+  padding-bottom: 8px;
+}
+
+.contacto .formu {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contacto .formulario button {
+  background: rgba(255, 89, 0, 0);
+  padding: 10px 30px 12px 30px;
+  color: #fff;
+  border-radius: 50px;
+  animation: movimientoBoton 0.5s infinite alternate;
+}
+
+.footer {
+  background: linear-gradient(orange, #fd7200);
+  color: white;
+}
+
+.foto {
+  transition: transform 0.3s ease;
+}
+
+.foto:hover {
+  transform: scale(1.1);
+}
+
+.navbar-brand {
+  transition: all 0.4s ease-in-out;
+}
+
+.container-texto {
+  position: relative;
+  overflow: hidden;
+}
+
+.texto-animado {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: subir-bajar 2s infinite;
+}
+
+@keyframes subir-bajar {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+}
+@keyframes cambiarColor {
+  0% {
+    color: white;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: rgb(255, 0, 136);
+  }
+  100% {
+    color: rgb(0, 255, 255);
+  }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes movimientoBoton {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 800px) {
+  .imagen-principal {
+    padding-top: 25%;
+    padding-bottom: 35%;
+  }
+}
+@media (max-width: 900px) {
+  .imagen-fija {
+    width: 25vw;
+    height: 25vh;
+  }
+}/*# sourceMappingURL=styles.css.map */

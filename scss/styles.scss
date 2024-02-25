@@ -1,0 +1,347 @@
+//INICIALIZACION A CERO DEL MARGEN Y PADDING
+* {
+	margin: 0;
+	padding: 0;
+}
+
+//USO DE VARIABLES
+
+$blanco: white;
+$negro: black;
+$fuente1: "Press Start 2P", cursive;
+
+//ESTILOS BARRA SCROLL
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: rgb(255, 166, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $blanco;
+	border-radius: 5px;
+}
+
+//ESTILOS GENERALES
+
+h2 {
+	font-family: $fuente1;
+	color: $blanco;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+//NAVBAR
+
+.navbar {
+	background: linear-gradient(orange, rgba(255, 166, 0, 0.6));
+	transition: all 0.4s ease-in-out;
+}
+.navbar-collapse {
+	align-items: center;
+	justify-content: right;
+}
+
+.nav-link {
+	color: $blanco;
+	transition: all 0.4s ease-in-out;
+}
+.navbar-nav {
+	position: relative;
+}
+
+.nav-link {
+	position: relative;
+	padding-bottom: 5px;
+	transition: color 0.3s ease;
+}
+
+.nav-link::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: black;
+	transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+	width: 70%;
+}
+
+// PAGINA INICIAL
+
+.imagen-principal {
+	background-image: url("/imgs/fondo.jpg");
+	background-size: cover;
+}
+
+.texto {
+	font-family: $fuente1;
+	color: $blanco;
+	margin-top: 10%;
+	margin-bottom: 15%;
+	padding: 10%;
+	h2 {
+		font-size: 3rem;
+		margin-bottom: 1em;
+		text-transform: uppercase;
+	}
+	h5 {
+		font-size: 1rem;
+	}
+}
+
+// ESTILOS ICONOS
+
+.campo-redes {
+	margin-top: 5%;
+	a {
+		text-decoration: none;
+		color: $blanco;
+	}
+}
+
+.campo-redes {
+	display: flex;
+	justify-content: center;
+}
+
+.campo-redes a {
+	display: inline-block;
+	margin: 0 10px;
+	font-size: 30px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.campo-redes a:hover {
+	transform: scale(1.2);
+}
+
+// SOBRE MI
+
+.sobre-mi {
+	background: linear-gradient(rgb(255, 140, 0), #fdbf43);
+}
+.imagen-fija {
+	width: 20vw;
+	height: 35vh;
+}
+
+.sobre-mi {
+	h3 {
+		font-family: monospace;
+	}
+	img {
+		border: 6px double black;
+		margin-top: 2%;
+	}
+}
+
+b {
+	animation: cambiarColor 2s infinite alternate;
+}
+
+// SKILLS
+
+.skills {
+	background: linear-gradient(rgb(255, 132, 0), #fdbf43);
+	background-color: $blanco;
+	padding: 50px 0;
+	.skills-text {
+		font-family: $fuente1;
+		animation: aparecer 1s ease-out;
+	}
+	.carousel-item {
+		img {
+			animation: aparecer 1s ease-out;
+		}
+	}
+}
+
+.skills p {
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+.carousel-caption {
+	position: relative;
+	margin-right: 30%;
+	font-family: $fuente1;
+}
+
+// CONTACTO
+
+.contacto {
+	background: linear-gradient(rgb(255, 140, 0), #fdbf43);
+}
+
+.contacto .info i {
+	font-size: 20px;
+	color: black;
+	float: left;
+	width: 44px;
+	height: 44px;
+	background: #effbf9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	transition: all 0.3s ease-in-out;
+}
+
+.contacto .info h4 {
+	padding: 0 0 0 60px;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #222222;
+}
+
+.contacto .info p {
+	padding: 0 0 0 60px;
+	font-size: 14px;
+	color: $blanco;
+}
+
+.contacto .info .email,
+.contacto .info .phone {
+	margin-top: 10%;
+}
+
+.contacto .info .email:hover i,
+.contacto .info .phone:hover i {
+	background: black;
+	color: #fff;
+}
+
+.contacto .formu {
+	width: 100%;
+	background: #fff;
+}
+
+.contacto .formu .form-group {
+	padding-bottom: 8px;
+}
+
+.contacto .formu {
+	display: none;
+	background: #fff;
+	text-align: center;
+	padding: 15px;
+}
+
+.contacto .formulario button {
+	background: #ff590000;
+	padding: 10px 30px 12px 30px;
+	color: #fff;
+	border-radius: 50px;
+	animation: movimientoBoton 0.5s infinite alternate;
+}
+
+// FOOTER
+
+.footer {
+	background: linear-gradient(orange, #fd7200);
+	color: $blanco;
+}
+
+// ANIMACIONES
+
+.foto {
+	transition: transform 0.3s ease;
+}
+
+.foto:hover {
+	transform: scale(1.1);
+}
+
+.navbar-brand {
+	transition: all 0.4s ease-in-out;
+}
+
+.container-texto {
+	position: relative;
+	overflow: hidden;
+}
+
+.texto-animado {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: subir-bajar 2s infinite;
+}
+
+// KEYFRAMES ANIMACIONES
+
+@keyframes subir-bajar {
+	0%,
+	100% {
+		top: 0;
+	}
+	50% {
+		top: 50px;
+	}
+}
+
+@keyframes cambiarColor {
+	0% {
+		color: white;
+	}
+	25% {
+		color: blue;
+	}
+	50% {
+		color: green;
+	}
+	75% {
+		color: rgb(255, 0, 136);
+	}
+	100% {
+		color: rgb(0, 255, 255);
+	}
+}
+
+@keyframes aparecer {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes movimientoBoton {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+// MEDIA QUERYS
+
+@media (max-width: 800px) {
+	.imagen-principal {
+		padding-top: 25%;
+		padding-bottom: 35%;
+	}
+}
+@media (max-width: 900px) {
+	.imagen-fija {
+		width: 25vw;
+		height: 25vh;
+	}
+}
